@@ -11,6 +11,11 @@
 		3A8488DD1FD58A8D00317124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8488DB1FD58A8D00317124 /* Main.storyboard */; };
 		3A8488DF1FD58A8D00317124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8488DE1FD58A8D00317124 /* Assets.xcassets */; };
 		3A8488E21FD58A8D00317124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8488E01FD58A8D00317124 /* LaunchScreen.storyboard */; };
+		3A8488F21FD5988B00317124 /* LBMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488F11FD5988B00317124 /* LBMainTabBarController.swift */; };
+		3A8488F41FD59AF500317124 /* LBProfileTabVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488F31FD59AF500317124 /* LBProfileTabVController.swift */; };
+		3A8488F61FD59B0B00317124 /* LBMessageTabVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488F51FD59B0B00317124 /* LBMessageTabVController.swift */; };
+		3A8488F81FD59B1800317124 /* LBHomeTabVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488F71FD59B1800317124 /* LBHomeTabVController.swift */; };
+		3A8488FA1FD59B2900317124 /* LBDiscoverTabVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488F91FD59B2900317124 /* LBDiscoverTabVController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		3A8488DE1FD58A8D00317124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8488E11FD58A8D00317124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8488E31FD58A8D00317124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A8488F11FD5988B00317124 /* LBMainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBMainTabBarController.swift; sourceTree = "<group>"; };
+		3A8488F31FD59AF500317124 /* LBProfileTabVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBProfileTabVController.swift; sourceTree = "<group>"; };
+		3A8488F51FD59B0B00317124 /* LBMessageTabVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBMessageTabVController.swift; sourceTree = "<group>"; };
+		3A8488F71FD59B1800317124 /* LBHomeTabVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBHomeTabVController.swift; sourceTree = "<group>"; };
+		3A8488F91FD59B2900317124 /* LBDiscoverTabVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBDiscoverTabVController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,7 @@
 		3A8488EA1FD5905300317124 /* discover */ = {
 			isa = PBXGroup;
 			children = (
+				3A8488F91FD59B2900317124 /* LBDiscoverTabVController.swift */,
 			);
 			path = discover;
 			sourceTree = "<group>";
@@ -84,6 +95,7 @@
 		3A8488EB1FD5905300317124 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				3A8488F71FD59B1800317124 /* LBHomeTabVController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -91,6 +103,7 @@
 		3A8488EC1FD5905300317124 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				3A8488F11FD5988B00317124 /* LBMainTabBarController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -98,6 +111,7 @@
 		3A8488ED1FD5905300317124 /* message */ = {
 			isa = PBXGroup;
 			children = (
+				3A8488F51FD59B0B00317124 /* LBMessageTabVController.swift */,
 			);
 			path = message;
 			sourceTree = "<group>";
@@ -105,6 +119,7 @@
 		3A8488EE1FD5905300317124 /* profile */ = {
 			isa = PBXGroup;
 			children = (
+				3A8488F31FD59AF500317124 /* LBProfileTabVController.swift */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -183,6 +198,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8488F61FD59B0B00317124 /* LBMessageTabVController.swift in Sources */,
+				3A8488FA1FD59B2900317124 /* LBDiscoverTabVController.swift in Sources */,
+				3A8488F21FD5988B00317124 /* LBMainTabBarController.swift in Sources */,
+				3A8488F81FD59B1800317124 /* LBHomeTabVController.swift in Sources */,
+				3A8488F41FD59AF500317124 /* LBProfileTabVController.swift in Sources */,
 				3A8488D81FD58A8D00317124 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
