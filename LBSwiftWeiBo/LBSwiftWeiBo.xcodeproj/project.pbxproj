@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A8488D81FD58A8D00317124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488D71FD58A8D00317124 /* AppDelegate.swift */; };
-		3A8488DA1FD58A8D00317124 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488D91FD58A8D00317124 /* ViewController.swift */; };
 		3A8488DD1FD58A8D00317124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8488DB1FD58A8D00317124 /* Main.storyboard */; };
 		3A8488DF1FD58A8D00317124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8488DE1FD58A8D00317124 /* Assets.xcassets */; };
 		3A8488E21FD58A8D00317124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8488E01FD58A8D00317124 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		3A8488D41FD58A8D00317124 /* LBSwiftWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBSwiftWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8488D71FD58A8D00317124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A8488D91FD58A8D00317124 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A8488DC1FD58A8D00317124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A8488DE1FD58A8D00317124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8488E11FD58A8D00317124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,61 @@
 		3A8488D61FD58A8D00317124 /* LBSwiftWeiBo */ = {
 			isa = PBXGroup;
 			children = (
+				3A8488E91FD5905300317124 /* classes */,
 				3A8488D71FD58A8D00317124 /* AppDelegate.swift */,
-				3A8488D91FD58A8D00317124 /* ViewController.swift */,
 				3A8488DB1FD58A8D00317124 /* Main.storyboard */,
 				3A8488DE1FD58A8D00317124 /* Assets.xcassets */,
 				3A8488E01FD58A8D00317124 /* LaunchScreen.storyboard */,
 				3A8488E31FD58A8D00317124 /* Info.plist */,
 			);
 			path = LBSwiftWeiBo;
+			sourceTree = "<group>";
+		};
+		3A8488E91FD5905300317124 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				3A8488EA1FD5905300317124 /* discover */,
+				3A8488EB1FD5905300317124 /* home */,
+				3A8488EC1FD5905300317124 /* main */,
+				3A8488ED1FD5905300317124 /* message */,
+				3A8488EE1FD5905300317124 /* profile */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		3A8488EA1FD5905300317124 /* discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = discover;
+			sourceTree = "<group>";
+		};
+		3A8488EB1FD5905300317124 /* home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		3A8488EC1FD5905300317124 /* main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		3A8488ED1FD5905300317124 /* message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = message;
+			sourceTree = "<group>";
+		};
+		3A8488EE1FD5905300317124 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,12 +135,14 @@
 		3A8488CC1FD58A8D00317124 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LB;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = liubo;
 				TargetAttributes = {
 					3A8488D31FD58A8D00317124 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9266GAZZ3C;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,7 +183,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8488DA1FD58A8D00317124 /* ViewController.swift in Sources */,
 				3A8488D81FD58A8D00317124 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +306,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 9266GAZZ3C;
 				INFOPLIST_FILE = LBSwiftWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liubo.LBSwiftWeiBo;
@@ -272,6 +320,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 9266GAZZ3C;
 				INFOPLIST_FILE = LBSwiftWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liubo.LBSwiftWeiBo;
