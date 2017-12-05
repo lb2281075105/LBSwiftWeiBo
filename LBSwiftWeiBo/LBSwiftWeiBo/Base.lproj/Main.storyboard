@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="rt3-CY-j7R">
             <objects>
-                <tabBarController id="RgS-AE-BtI" sceneMemberID="viewController">
+                <tabBarController id="RgS-AE-BtI" customClass="LBTabBarController" customModule="LBSwiftWeiBo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Aye-SB-mAr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

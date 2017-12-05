@@ -13,6 +13,7 @@
 		3A4F1AC91FD6DF8C00399B04 /* LBDiscover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F1AC71FD6DF8C00399B04 /* LBDiscover.storyboard */; };
 		3A4F1ACB1FD6DF9D00399B04 /* LBMine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F1ACA1FD6DF9D00399B04 /* LBMine.storyboard */; };
 		3A4F1ACE1FD6E20400399B04 /* LBCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F1ACC1FD6E20400399B04 /* LBCenter.storyboard */; };
+		3A4F1AD01FD6E33700399B04 /* LBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F1ACF1FD6E33700399B04 /* LBTabBarController.swift */; };
 		3A8488D81FD58A8D00317124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488D71FD58A8D00317124 /* AppDelegate.swift */; };
 		3A8488DD1FD58A8D00317124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8488DB1FD58A8D00317124 /* Main.storyboard */; };
 		3A8488DF1FD58A8D00317124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8488DE1FD58A8D00317124 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		3A4F1AC81FD6DF8C00399B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LBDiscover.storyboard; sourceTree = "<group>"; };
 		3A4F1ACA1FD6DF9D00399B04 /* LBMine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LBMine.storyboard; sourceTree = "<group>"; };
 		3A4F1ACD1FD6E20400399B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LBCenter.storyboard; sourceTree = "<group>"; };
+		3A4F1ACF1FD6E33700399B04 /* LBTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBTabBarController.swift; sourceTree = "<group>"; };
 		3A8488D41FD58A8D00317124 /* LBSwiftWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBSwiftWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8488D71FD58A8D00317124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8488DC1FD58A8D00317124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				3A4F1AB51FD6C9DB00399B04 /* Resource */,
 				3A8488F11FD5988B00317124 /* LBMainTabBarController.swift */,
+				3A4F1ACF1FD6E33700399B04 /* LBTabBarController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4F1AD01FD6E33700399B04 /* LBTabBarController.swift in Sources */,
 				3A8488F61FD59B0B00317124 /* LBMessageTabVController.swift in Sources */,
 				3A8488FA1FD59B2900317124 /* LBDiscoverTabVController.swift in Sources */,
 				3A8488F21FD5988B00317124 /* LBMainTabBarController.swift in Sources */,
