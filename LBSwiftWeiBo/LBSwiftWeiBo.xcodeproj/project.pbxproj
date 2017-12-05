@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A4F1AB71FD6C9DB00399B04 /* LBMainTabBarSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A4F1AB61FD6C9DB00399B04 /* LBMainTabBarSettings.json */; };
 		3A8488D81FD58A8D00317124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488D71FD58A8D00317124 /* AppDelegate.swift */; };
 		3A8488DD1FD58A8D00317124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8488DB1FD58A8D00317124 /* Main.storyboard */; };
 		3A8488DF1FD58A8D00317124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8488DE1FD58A8D00317124 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A4F1AB61FD6C9DB00399B04 /* LBMainTabBarSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LBMainTabBarSettings.json; sourceTree = "<group>"; };
 		3A8488D41FD58A8D00317124 /* LBSwiftWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBSwiftWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8488D71FD58A8D00317124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8488DC1FD58A8D00317124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A4F1AB51FD6C9DB00399B04 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3A4F1AB61FD6C9DB00399B04 /* LBMainTabBarSettings.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		3A8488CB1FD58A8D00317124 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		3A8488EC1FD5905300317124 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				3A4F1AB51FD6C9DB00399B04 /* Resource */,
 				3A8488F11FD5988B00317124 /* LBMainTabBarController.swift */,
 			);
 			path = main;
@@ -186,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8488E21FD58A8D00317124 /* LaunchScreen.storyboard in Resources */,
+				3A4F1AB71FD6C9DB00399B04 /* LBMainTabBarSettings.json in Resources */,
 				3A8488DF1FD58A8D00317124 /* Assets.xcassets in Resources */,
 				3A8488DD1FD58A8D00317124 /* Main.storyboard in Resources */,
 			);
@@ -369,6 +381,7 @@
 				3A8488E81FD58A8D00317124 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
