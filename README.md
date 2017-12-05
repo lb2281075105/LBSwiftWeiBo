@@ -1,5 +1,5 @@
 # LBSwiftWeiBo
-微博 -- Swift版本
+#### 微博 -- Swift版本
 
 
 
@@ -27,7 +27,7 @@ Storyboard 创建项目结构快而且简单，这里涉及到storyboard referen
 ④ 创建标签栏中间按钮的思路：空出中间item区域，使用UIButton添加即可<br>
 4、小知识点<br>
 ① convenience遍历构造函数使用<br>
-② 类方法的创建()<br>
+② 类方法的创建<br>
 `class func lbweibo -> String{}`<br>
 ③ 按钮方法的监听<br>
 `btn.addTarget(self, action: #selector(LBTabBarController.composeBtnClick), for: .touchUpInside)`<br>
@@ -39,7 +39,7 @@ Storyboard 创建项目结构快而且简单，这里涉及到storyboard referen
 `as`、`as?`、`as!`区分使用原理<br>
 * as 一般使用swift转换成oc对象，确定对象的转换<br>
 * as? 一般是AnyObject?可选类型转换成我们需要的类型<br>
-* as! 一般不适用，不太安全<br>
+* as! 一般不适用，不太安全
 ⑥ 对于可选类型我们一般不适用`!`来进行解包，但是有个例还是可以使用`!`进行解包的，<br>
 对于我们确定一定有值的情况下是可以使用的<br>
 ⑦ 方法的重载<br>
