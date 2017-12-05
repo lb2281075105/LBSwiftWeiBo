@@ -12,11 +12,10 @@ class LBTabBarController: UITabBarController {
 
     // 懒加载属性
     private lazy var imageNames = ["tabbar_home", "tabbar_message_center", "", "tabbar_discover", "tabbar_profile"]
-    lazy var composeBtn : UIButton = UIButton()
-    
+    lazy var composeBtn : UIButton = UIButton(imageName: "tabbar_compose_icon_add", bgImageName: "tabbar_compose_button")
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupComposeBtn()
+//        setupComposeBtn()
     }
     
     // 需要在viewWillAppear调整，不能在viewDidLoad调整
