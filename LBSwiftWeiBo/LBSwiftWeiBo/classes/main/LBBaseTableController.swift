@@ -12,6 +12,7 @@ class LBBaseTableController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
+        
     }
 }
