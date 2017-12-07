@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LBMessageTabVController: UITableViewController {
+class LBMessageTabVController: LBBaseTableController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

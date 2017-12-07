@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LBHomeTabVController: UITableViewController {
+class LBHomeTabVController: LBBaseTableController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
