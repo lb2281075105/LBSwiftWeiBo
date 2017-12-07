@@ -42,12 +42,13 @@ extension LBTabBarController{
     func setupComposeBtn() {
         // 把composeBtn添加到tabbar中
         tabBar.addSubview(composeBtn)
-        
-//        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), for: .normal)
-//        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: .highlighted)
-//        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: .normal)
-//        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: .highlighted)
-//        composeBtn.sizeToFit()
+        /*
+        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), for: .normal)
+        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: .highlighted)
+        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: .normal)
+        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: .highlighted)
+        composeBtn.sizeToFit()
+        */
         // 设置位置
         composeBtn.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.size.height * 0.5)
         composeBtn.addTarget(self, action: #selector(LBTabBarController.composeBtnClick), for: .touchUpInside)
