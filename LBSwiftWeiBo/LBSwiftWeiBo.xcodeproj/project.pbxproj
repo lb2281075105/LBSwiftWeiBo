@@ -24,6 +24,7 @@
 		3A8488F61FD59B0B00317124 /* LBMessageTabVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488F51FD59B0B00317124 /* LBMessageTabVController.swift */; };
 		3A8488F81FD59B1800317124 /* LBHomeTabVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488F71FD59B1800317124 /* LBHomeTabVController.swift */; };
 		3A8488FA1FD59B2900317124 /* LBDiscoverTabVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8488F91FD59B2900317124 /* LBDiscoverTabVController.swift */; };
+		F84164011FDA1F670072832B /* LBVisibleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84164001FDA1F670072832B /* LBVisibleView.xib */; };
 		F8BDDF781FD9280200328298 /* LBBaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDF771FD9280200328298 /* LBBaseTableController.swift */; };
 		F8BDDF7B1FD92C1100328298 /* LBVisibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		3A8488F51FD59B0B00317124 /* LBMessageTabVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBMessageTabVController.swift; sourceTree = "<group>"; };
 		3A8488F71FD59B1800317124 /* LBHomeTabVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBHomeTabVController.swift; sourceTree = "<group>"; };
 		3A8488F91FD59B2900317124 /* LBDiscoverTabVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBDiscoverTabVController.swift; sourceTree = "<group>"; };
+		F84164001FDA1F670072832B /* LBVisibleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LBVisibleView.xib; sourceTree = "<group>"; };
 		F8BDDF771FD9280200328298 /* LBBaseTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBBaseTableController.swift; sourceTree = "<group>"; };
 		F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBVisibleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */,
+				F84164001FDA1F670072832B /* LBVisibleView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				3A4F1ACE1FD6E20400399B04 /* LBCenter.storyboard in Resources */,
 				3A8488DF1FD58A8D00317124 /* Assets.xcassets in Resources */,
 				3A4F1AC91FD6DF8C00399B04 /* LBDiscover.storyboard in Resources */,
+				F84164011FDA1F670072832B /* LBVisibleView.xib in Resources */,
 				3A8488DD1FD58A8D00317124 /* Main.storyboard in Resources */,
 				3A4F1ACB1FD6DF9D00399B04 /* LBMine.storyboard in Resources */,
 			);
@@ -421,28 +425,30 @@
 		3A8488E71FD58A8D00317124 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9266GAZZ3C;
 				INFOPLIST_FILE = LBSwiftWeiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liubo.LBSwiftWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3A8488E81FD58A8D00317124 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9266GAZZ3C;
 				INFOPLIST_FILE = LBSwiftWeiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liubo.LBSwiftWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
