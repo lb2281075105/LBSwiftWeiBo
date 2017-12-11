@@ -81,6 +81,11 @@
                 <constraint firstItem="zDC-2X-kd0" firstAttribute="leading" secondItem="Y3Y-g4-cU0" secondAttribute="leading" constant="45" id="srv-Iq-mtA"/>
                 <constraint firstItem="whx-Vw-M8e" firstAttribute="centerX" secondItem="Y3Y-g4-cU0" secondAttribute="centerX" id="ykh-TK-ow4"/>
             </constraints>
+            <connections>
+                <outlet property="iconView" destination="2uy-EY-Ubp" id="nvr-ef-lNQ"/>
+                <outlet property="rotationView" destination="whx-Vw-M8e" id="0f5-5K-8TK"/>
+                <outlet property="tipLabel" destination="zDC-2X-kd0" id="HCH-Z0-Ibg"/>
+            </connections>
             <point key="canvasLocation" x="385" y="330"/>
         </view>
     </objects>
