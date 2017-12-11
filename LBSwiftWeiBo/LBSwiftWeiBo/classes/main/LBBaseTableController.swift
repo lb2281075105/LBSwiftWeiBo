@@ -9,10 +9,19 @@
 import UIKit
 
 class LBBaseTableController: UITableViewController {
-    
+    // 懒加载
+    lazy var visitorView : LBVisibleView = LBVisibleView.visitorView()
+    var isLogin : Bool = false
+    override func loadView() {
+        isLogin ? super.loadView() : setUpVisitorView()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        
+    }
+}
+
+extension LBBaseTableController {
+    func setUpVisitorView() {
+        view = visitorView
     }
 }
