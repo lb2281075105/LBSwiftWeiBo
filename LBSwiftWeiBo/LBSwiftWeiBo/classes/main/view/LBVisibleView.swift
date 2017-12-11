@@ -15,6 +15,11 @@ class LBVisibleView: UIView {
     @IBOutlet weak var iconView: UIImageView!
     /// 文本
     @IBOutlet weak var tipLabel: UILabel!
+    /// 注册按钮
+    @IBOutlet weak var registerBtn: UIButton!
+    /// 登录按钮
+    @IBOutlet weak var loginBtn: UIButton!
+    
     class func visitorView() -> LBVisibleView{
         return Bundle.main.loadNibNamed("LBVisibleView", owner: nil, options: nil)?.first as!LBVisibleView
     }

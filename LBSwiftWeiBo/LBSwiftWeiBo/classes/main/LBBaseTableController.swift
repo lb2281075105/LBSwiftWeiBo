@@ -17,11 +17,32 @@ class LBBaseTableController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavigationItems()
     }
 }
 
 extension LBBaseTableController {
     func setUpVisitorView() {
         view = visitorView
+        
+        visitorView.registerBtn.addTarget(self, action: #selector(LBBaseTableController.registerBtnClick), for: .touchUpInside)
+        visitorView.loginBtn.addTarget(self, action: #selector(LBBaseTableController.loginBtnClick), for: .touchUpInside)
+    }
+    
+    func setupNavigationItems() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(LBBaseTableController.registerBtnClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(LBBaseTableController.loginBtnClick))
+    }
+}
+
+extension LBBaseTableController {
+    // 注册
+    @objc func registerBtnClick() {
+        print("registerBtnClick")
+    }
+    // 登录
+    @objc func loginBtnClick() {
+        print("loginBtnClick")
     }
 }
