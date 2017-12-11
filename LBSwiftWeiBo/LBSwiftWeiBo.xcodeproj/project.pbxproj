@@ -29,6 +29,7 @@
 		F84CA4911FDE5ECB000B5687 /* LBTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84CA4901FDE5ECB000B5687 /* LBTitleButton.swift */; };
 		F84CA4951FDE648D000B5687 /* LBPopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84CA4931FDE648D000B5687 /* LBPopController.swift */; };
 		F84CA4961FDE648D000B5687 /* LBPopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84CA4941FDE648D000B5687 /* LBPopController.xib */; };
+		F84CA4981FDE6BF1000B5687 /* LBPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84CA4971FDE6BF1000B5687 /* LBPresentationController.swift */; };
 		F8BDDF781FD9280200328298 /* LBBaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDF771FD9280200328298 /* LBBaseTableController.swift */; };
 		F8BDDF7B1FD92C1100328298 /* LBVisibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		F84CA4901FDE5ECB000B5687 /* LBTitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTitleButton.swift; sourceTree = "<group>"; };
 		F84CA4931FDE648D000B5687 /* LBPopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPopController.swift; sourceTree = "<group>"; };
 		F84CA4941FDE648D000B5687 /* LBPopController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LBPopController.xib; sourceTree = "<group>"; };
+		F84CA4971FDE6BF1000B5687 /* LBPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPresentationController.swift; sourceTree = "<group>"; };
 		F8BDDF771FD9280200328298 /* LBBaseTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBBaseTableController.swift; sourceTree = "<group>"; };
 		F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBVisibleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +206,7 @@
 			children = (
 				F84CA4931FDE648D000B5687 /* LBPopController.swift */,
 				F84CA4941FDE648D000B5687 /* LBPopController.xib */,
+				F84CA4971FDE6BF1000B5687 /* LBPresentationController.swift */,
 			);
 			path = popView;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				3A8488FA1FD59B2900317124 /* LBDiscoverTabVController.swift in Sources */,
 				F84CA4951FDE648D000B5687 /* LBPopController.swift in Sources */,
 				3A4F1AD41FD6EC7B00399B04 /* UIButton+Extension.swift in Sources */,
+				F84CA4981FDE6BF1000B5687 /* LBPresentationController.swift in Sources */,
 				3A8488F21FD5988B00317124 /* LBMainTabBarController.swift in Sources */,
 				3A8488F81FD59B1800317124 /* LBHomeTabVController.swift in Sources */,
 				F8BDDF781FD9280200328298 /* LBBaseTableController.swift in Sources */,

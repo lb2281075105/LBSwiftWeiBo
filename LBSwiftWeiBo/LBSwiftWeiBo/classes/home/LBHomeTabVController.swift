@@ -40,8 +40,15 @@ extension LBHomeTabVController {
         titleBtn.isSelected = !titleBtn.isSelected
         
         // 弹出的控制器
-        let popoverVc = LBPopController()
-        popoverVc.modalPresentationStyle = .custom
-        present(popoverVc, animated: true, completion: nil)
+        let popoVc = LBPopController()
+        popoVc.transitioningDelegate = self
+        popoVc.modalPresentationStyle = .custom
+        present(popoVc, animated: true, completion: nil)
+    }
+}
+
+extension LBHomeTabVController : UIViewControllerTransitioningDelegate {
+    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
+        return LBPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
