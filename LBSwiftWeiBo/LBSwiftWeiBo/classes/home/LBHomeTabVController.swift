@@ -10,6 +10,7 @@ import UIKit
 
 class LBHomeTabVController: LBBaseTableController {
     lazy var titleBtn : LBTitleButton = LBTitleButton()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,7 +45,7 @@ extension LBHomeTabVController {
         popoVc.transitioningDelegate = self
         // 保证下面控制器不被移除
         popoVc.modalPresentationStyle = .custom
-        present(popoVc, animated: true, completion: nil)
+//        present(popoVc, animated: true, completion: nil)
     }
 }
 
