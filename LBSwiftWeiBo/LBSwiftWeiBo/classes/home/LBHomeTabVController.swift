@@ -42,6 +42,7 @@ extension LBHomeTabVController {
         // 弹出的控制器
         let popoVc = LBPopController()
         popoVc.transitioningDelegate = self
+        // 保证下面控制器不被移除
         popoVc.modalPresentationStyle = .custom
         present(popoVc, animated: true, completion: nil)
     }

@@ -14,13 +14,18 @@ class LBPresentationController: UIPresentationController {
     
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
-        
-        // 设置弹出View的尺寸
-       presentedView?.frame = CGRect(x: 100, y: 55, width: 180, height: 250)
-        
-        // 添加蒙版
-        setupCoverView()
+        presentedView?.frame = CGRect(x: 10, y: 55, width: 180, height: 250)
     }
+    
+//    override func containerViewWillLayoutSubviews() {
+//        super.containerViewWillLayoutSubviews()
+//
+//        // 设置弹出View的尺寸
+//       presentedView?.frame = CGRect(x: 100, y: 55, width: 180, height: 250)
+//
+//        // 添加蒙版
+//        // setupCoverView()
+//    }
 }
 
 // 设置UI界面相关
