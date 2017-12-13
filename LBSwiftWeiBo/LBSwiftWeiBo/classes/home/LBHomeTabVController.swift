@@ -48,7 +48,7 @@ extension LBHomeTabVController {
         // 保证下面控制器不被移除
         popoVc.modalPresentationStyle = .custom
         popoverAnimator.presentedFrame = CGRect(x: 100, y: 100, width: 180, height: 250)
-        present(popoVc, animated: true, completion: nil)
+//        present(popoVc, animated: true, completion: nil)
     }
 }
 

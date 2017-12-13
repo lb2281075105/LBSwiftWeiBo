@@ -22,7 +22,7 @@ class LBPresentationController: UIPresentationController {
         presentedView?.frame = presentedFrame
         
         // 添加蒙版
-        // setupCoverView()
+         setupCoverView()
     }
 }
 
