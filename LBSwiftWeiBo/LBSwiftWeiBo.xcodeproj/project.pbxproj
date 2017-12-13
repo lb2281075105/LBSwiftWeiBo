@@ -34,6 +34,7 @@
 		F8BDDF781FD9280200328298 /* LBBaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDF771FD9280200328298 /* LBBaseTableController.swift */; };
 		F8BDDF7B1FD92C1100328298 /* LBVisibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */; };
 		F8F152D31FE11D2100308110 /* LBPopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F152D21FE11D2100308110 /* LBPopoverAnimator.swift */; };
+		F8F152D61FE140F700308110 /* LBNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F152D51FE140F700308110 /* LBNetWork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		F8BDDF771FD9280200328298 /* LBBaseTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBBaseTableController.swift; sourceTree = "<group>"; };
 		F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBVisibleView.swift; sourceTree = "<group>"; };
 		F8F152D21FE11D2100308110 /* LBPopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPopoverAnimator.swift; sourceTree = "<group>"; };
+		F8F152D51FE140F700308110 /* LBNetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBNetWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		3A4F1AD11FD6EB5C00399B04 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				F8F152D41FE140B100308110 /* netWork */,
 				3A4F1AD21FD6EB5C00399B04 /* category */,
 			);
 			path = tools;
@@ -247,6 +250,14 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		F8F152D41FE140B100308110 /* netWork */ = {
+			isa = PBXGroup;
+			children = (
+				F8F152D51FE140F700308110 /* LBNetWork.swift */,
+			);
+			path = netWork;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,6 +393,7 @@
 			files = (
 				3A4F1AD01FD6E33700399B04 /* LBTabBarController.swift in Sources */,
 				3A8488F61FD59B0B00317124 /* LBMessageTabVController.swift in Sources */,
+				F8F152D61FE140F700308110 /* LBNetWork.swift in Sources */,
 				F84CA4911FDE5ECB000B5687 /* LBTitleButton.swift in Sources */,
 				F84CA48F1FDE5E01000B5687 /* UIBarButtonItem+Extension.swift in Sources */,
 				3A8488FA1FD59B2900317124 /* LBDiscoverTabVController.swift in Sources */,
