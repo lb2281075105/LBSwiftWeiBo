@@ -10,7 +10,9 @@ import UIKit
 
 class LBHomeTabVController: LBBaseTableController {
     lazy var titleBtn : LBTitleButton = LBTitleButton()
-
+    lazy var popoverAnimator : LBPopoverAnimator = LBPopoverAnimator {[weak self] (presented) -> () in
+        self?.titleBtn.isSelected = presented
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,7 +47,8 @@ extension LBHomeTabVController {
         popoVc.transitioningDelegate = self
         // 保证下面控制器不被移除
         popoVc.modalPresentationStyle = .custom
-//        present(popoVc, animated: true, completion: nil)
+        popoverAnimator.presentedFrame = CGRect(x: 100, y: 100, width: 180, height: 250)
+        present(popoVc, animated: true, completion: nil)
     }
 }
 

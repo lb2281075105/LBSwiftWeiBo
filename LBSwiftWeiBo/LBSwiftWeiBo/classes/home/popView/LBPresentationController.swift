@@ -9,22 +9,21 @@
 import UIKit
 
 class LBPresentationController: UIPresentationController {
-    // 懒加载
+    var presentedFrame : CGRect = CGRect.zero
+    
+    // 懒加载属性
     lazy var coverView : UIView = UIView()
     
+    // 系统回调函数
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
-
+        
         // 设置弹出View的尺寸
-       presentedView?.frame = CGRect(x: 100, y: 55, width: 180, height: 250)
-
+        presentedView?.frame = presentedFrame
+        
         // 添加蒙版
         // setupCoverView()
     }
-//    override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
-//        super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
-//        presentedView?.frame = CGRect(x: 100, y: 55, width: 180, height: 250)
-//    }
 }
 
 // 设置UI界面相关
@@ -38,7 +37,7 @@ extension LBPresentationController {
         coverView.frame = containerView!.bounds
         
         // 添加手势
-        let tapGes = UITapGestureRecognizer(target: self, action: #selector(LBPresentationController.coverViewClick))
+        let tapGes = UITapGestureRecognizer(target: self, action:#selector(LBPresentationController.coverViewClick))
         coverView.addGestureRecognizer(tapGes)
     }
 }
