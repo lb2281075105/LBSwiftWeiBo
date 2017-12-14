@@ -37,6 +37,9 @@
 		F8EAC8401FE20B1A0020ABC1 /* LBOauthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC83E1FE20B1A0020ABC1 /* LBOauthController.swift */; };
 		F8EAC8411FE20B1A0020ABC1 /* LBOauthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8EAC83F1FE20B1A0020ABC1 /* LBOauthController.xib */; };
 		F8EAC8431FE221A80020ABC1 /* LBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC8421FE221A80020ABC1 /* LBUserAccount.swift */; };
+		F8EAC8471FE22B550020ABC1 /* LBWelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC8451FE22B550020ABC1 /* LBWelcomeController.swift */; };
+		F8EAC8481FE22B550020ABC1 /* LBWelcomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8EAC8461FE22B550020ABC1 /* LBWelcomeController.xib */; };
+		F8EAC84A1FE22D9C0020ABC1 /* LBUserAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC8491FE22D9C0020ABC1 /* LBUserAViewModel.swift */; };
 		F8F152D31FE11D2100308110 /* LBPopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F152D21FE11D2100308110 /* LBPopoverAnimator.swift */; };
 		F8F152D61FE140F700308110 /* LBNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F152D51FE140F700308110 /* LBNetWork.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +79,9 @@
 		F8EAC83E1FE20B1A0020ABC1 /* LBOauthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBOauthController.swift; sourceTree = "<group>"; };
 		F8EAC83F1FE20B1A0020ABC1 /* LBOauthController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LBOauthController.xib; sourceTree = "<group>"; };
 		F8EAC8421FE221A80020ABC1 /* LBUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBUserAccount.swift; sourceTree = "<group>"; };
+		F8EAC8451FE22B550020ABC1 /* LBWelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBWelcomeController.swift; sourceTree = "<group>"; };
+		F8EAC8461FE22B550020ABC1 /* LBWelcomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LBWelcomeController.xib; sourceTree = "<group>"; };
+		F8EAC8491FE22D9C0020ABC1 /* LBUserAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBUserAViewModel.swift; sourceTree = "<group>"; };
 		F8F152D21FE11D2100308110 /* LBPopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPopoverAnimator.swift; sourceTree = "<group>"; };
 		F8F152D51FE140F700308110 /* LBNetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBNetWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +192,7 @@
 		3A8488EC1FD5905300317124 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				F8EAC8441FE22B3B0020ABC1 /* welcome */,
 				F8EAC83B1FE20ADB0020ABC1 /* Oauth */,
 				F84CA4851FDE51F9000B5687 /* Main.storyboard */,
 				F8BDDF791FD92BF700328298 /* view */,
@@ -274,8 +281,18 @@
 				F8EAC83E1FE20B1A0020ABC1 /* LBOauthController.swift */,
 				F8EAC83F1FE20B1A0020ABC1 /* LBOauthController.xib */,
 				F8EAC8421FE221A80020ABC1 /* LBUserAccount.swift */,
+				F8EAC8491FE22D9C0020ABC1 /* LBUserAViewModel.swift */,
 			);
 			path = Oauth;
+			sourceTree = "<group>";
+		};
+		F8EAC8441FE22B3B0020ABC1 /* welcome */ = {
+			isa = PBXGroup;
+			children = (
+				F8EAC8451FE22B550020ABC1 /* LBWelcomeController.swift */,
+				F8EAC8461FE22B550020ABC1 /* LBWelcomeController.xib */,
+			);
+			path = welcome;
 			sourceTree = "<group>";
 		};
 		F8F152D41FE140B100308110 /* netWork */ = {
@@ -356,6 +373,7 @@
 				3A8488DF1FD58A8D00317124 /* Assets.xcassets in Resources */,
 				F84CA4861FDE51F9000B5687 /* Main.storyboard in Resources */,
 				F84CA4961FDE648D000B5687 /* LBPopController.xib in Resources */,
+				F8EAC8481FE22B550020ABC1 /* LBWelcomeController.xib in Resources */,
 				F84CA48D1FDE5273000B5687 /* LBMessage.storyboard in Resources */,
 				F84164011FDA1F670072832B /* LBVisibleView.xib in Resources */,
 				F84CA4891FDE522B000B5687 /* LBCenter.storyboard in Resources */,
@@ -430,10 +448,12 @@
 				3A8488FA1FD59B2900317124 /* LBDiscoverTabVController.swift in Sources */,
 				F84CA4951FDE648D000B5687 /* LBPopController.swift in Sources */,
 				3A4F1AD41FD6EC7B00399B04 /* UIButton+Extension.swift in Sources */,
+				F8EAC84A1FE22D9C0020ABC1 /* LBUserAViewModel.swift in Sources */,
 				F8F152D31FE11D2100308110 /* LBPopoverAnimator.swift in Sources */,
 				F84CA4981FDE6BF1000B5687 /* LBPresentationController.swift in Sources */,
 				F8EAC83A1FE202B60020ABC1 /* LBHeader.swift in Sources */,
 				3A8488F21FD5988B00317124 /* LBMainTabBarController.swift in Sources */,
+				F8EAC8471FE22B550020ABC1 /* LBWelcomeController.swift in Sources */,
 				3A8488F81FD59B1800317124 /* LBHomeTabVController.swift in Sources */,
 				F8BDDF781FD9280200328298 /* LBBaseTableController.swift in Sources */,
 				3A8488F41FD59AF500317124 /* LBProfileTabVController.swift in Sources */,
