@@ -12,10 +12,15 @@ class LBUserAccount: NSObject {
     // 授权AccessToken
     var access_token : String?
     // 过期时间-->秒
-    var expires_in : TimeInterval = 0.0
+    var expires_in : TimeInterval = 0.0 {
+        didSet {
+            expires_date = NSDate(timeIntervalSinceNow: expires_in)
+        }
+    }
     // 用户ID
     var uid : String?
-    
+    // 过期日期
+    var expires_date : NSDate?
     // 自定义构造函数
     init(dict : [String : AnyObject]) {
         super.init()
