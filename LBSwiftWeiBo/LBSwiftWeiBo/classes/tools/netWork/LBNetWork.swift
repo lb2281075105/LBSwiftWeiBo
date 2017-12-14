@@ -83,3 +83,26 @@ extension LBNetWork {
         }
     }
 }
+// 请求与首页数据
+extension LBNetWork {
+    func loadStatuses(completion : @escaping (_ result : [[String : AnyObject]]?,_ isSuccess : Bool) -> ()) {
+        // 获取请求的URLString
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        
+        // 获取请求的参数
+        let parameters = ["access_token" : (LBUserAViewModel.shareIntance.account?.access_token)!]
+        
+        // 发送网络请求
+        request(requestType: .GET, urlString: urlString, parameters: parameters as [String : AnyObject]) { (result, isSuccess) -> () in
+            
+            // 获取字典的数据
+            guard let resultDict = result as? [String : AnyObject] else {
+                completion(nil, isSuccess)
+                return
+            }
+            
+            // 将数组数据回调给外界控制器
+            completion(resultDict["statuses"] as? [[String : AnyObject]], isSuccess)
+        }
+    }
+}

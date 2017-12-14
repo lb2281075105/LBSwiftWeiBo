@@ -21,6 +21,8 @@ class LBHomeTabVController: LBBaseTableController {
             return
         }
         setupNavigationBar()
+        // 请求数据
+        loadStatuses()
     }
 }
 extension LBHomeTabVController {
@@ -55,5 +57,27 @@ extension LBHomeTabVController {
 extension LBHomeTabVController : UIViewControllerTransitioningDelegate {
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
         return LBPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}
+
+extension LBHomeTabVController{
+    func loadStatuses() {
+        LBNetWork.shareInstance.loadStatuses { (result, isSuccess) -> () in
+            // 错误结果
+            if isSuccess == false{
+                print(isSuccess)
+                return
+            }
+            
+            // 获取可选类型中的数据
+            guard let resultArray = result else {
+                return
+            }
+            
+            // 遍历微博对应的字典
+            for statusDict in resultArray {
+                print(statusDict)
+            }
+        }
     }
 }
