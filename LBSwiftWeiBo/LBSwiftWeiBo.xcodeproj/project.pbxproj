@@ -41,6 +41,7 @@
 		F8EAC8481FE22B550020ABC1 /* LBWelcomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8EAC8461FE22B550020ABC1 /* LBWelcomeController.xib */; };
 		F8EAC84A1FE22D9C0020ABC1 /* LBUserAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC8491FE22D9C0020ABC1 /* LBUserAViewModel.swift */; };
 		F8EAC84D1FE26E770020ABC1 /* LBHStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC84C1FE26E770020ABC1 /* LBHStatusModel.swift */; };
+		F8EAC84F1FE278210020ABC1 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC84E1FE278210020ABC1 /* NSDate+Extension.swift */; };
 		F8F152D31FE11D2100308110 /* LBPopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F152D21FE11D2100308110 /* LBPopoverAnimator.swift */; };
 		F8F152D61FE140F700308110 /* LBNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F152D51FE140F700308110 /* LBNetWork.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		F8EAC8461FE22B550020ABC1 /* LBWelcomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LBWelcomeController.xib; sourceTree = "<group>"; };
 		F8EAC8491FE22D9C0020ABC1 /* LBUserAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBUserAViewModel.swift; sourceTree = "<group>"; };
 		F8EAC84C1FE26E770020ABC1 /* LBHStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHStatusModel.swift; sourceTree = "<group>"; };
+		F8EAC84E1FE278210020ABC1 /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		F8F152D21FE11D2100308110 /* LBPopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPopoverAnimator.swift; sourceTree = "<group>"; };
 		F8F152D51FE140F700308110 /* LBNetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBNetWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 				3A4F1AD31FD6EC7B00399B04 /* UIButton+Extension.swift */,
 				F84CA48E1FDE5E01000B5687 /* UIBarButtonItem+Extension.swift */,
 				F84CA4901FDE5ECB000B5687 /* LBTitleButton.swift */,
+				F8EAC84E1FE278210020ABC1 /* NSDate+Extension.swift */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				3A8488F61FD59B0B00317124 /* LBMessageTabVController.swift in Sources */,
 				F8F152D61FE140F700308110 /* LBNetWork.swift in Sources */,
 				F84CA4911FDE5ECB000B5687 /* LBTitleButton.swift in Sources */,
+				F8EAC84F1FE278210020ABC1 /* NSDate+Extension.swift in Sources */,
 				F8EAC8431FE221A80020ABC1 /* LBUserAccount.swift in Sources */,
 				F84CA48F1FDE5E01000B5687 /* UIBarButtonItem+Extension.swift in Sources */,
 				F8EAC8401FE20B1A0020ABC1 /* LBOauthController.swift in Sources */,
