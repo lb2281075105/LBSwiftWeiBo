@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LBWelcomeController" customModule="LBSwiftWeiBo" customModuleProvider="target">
             <connections>
                 <outlet property="iconView" destination="vtb-7N-tjB" id="1dN-yF-csa"/>
-                <outlet property="iconViewBottomCons" destination="wDv-ri-xrH" id="EmZ-rY-DA7"/>
+                <outlet property="iconViewBottomCons" destination="19Q-3L-FhV" id="iBb-kE-0wv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,6 +26,12 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="htf-kG-sAC">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ct-Sk-230">
+                    <rect key="frame" x="156.5" y="529" width="61.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="vtb-7N-tjB">
                     <rect key="frame" x="142.5" y="427" width="90" height="90"/>
                     <constraints>
@@ -32,23 +39,18 @@
                         <constraint firstAttribute="height" constant="90" id="uCf-Rv-q3n"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ct-Sk-230">
-                    <rect key="frame" x="156.5" y="536" width="61.5" height="18"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="vtb-7N-tjB" secondAttribute="bottom" constant="150" id="19Q-3L-FhV"/>
                 <constraint firstItem="htf-kG-sAC" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="LD4-WC-EQK"/>
                 <constraint firstItem="4Ct-Sk-230" firstAttribute="centerX" secondItem="htf-kG-sAC" secondAttribute="centerX" id="Lar-7T-fKL"/>
                 <constraint firstItem="htf-kG-sAC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QJA-zH-Wv6"/>
                 <constraint firstItem="vtb-7N-tjB" firstAttribute="centerX" secondItem="htf-kG-sAC" secondAttribute="centerX" id="Vfy-Ui-3Yj"/>
                 <constraint firstItem="htf-kG-sAC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XCV-02-w5C"/>
-                <constraint firstItem="4Ct-Sk-230" firstAttribute="top" secondItem="vtb-7N-tjB" secondAttribute="bottom" constant="19" id="fZP-43-1is"/>
+                <constraint firstAttribute="bottom" secondItem="htf-kG-sAC" secondAttribute="bottomMargin" constant="8" id="jC5-9Q-3Bw"/>
+                <constraint firstItem="4Ct-Sk-230" firstAttribute="bottom" secondItem="vtb-7N-tjB" secondAttribute="bottom" constant="30" id="lHv-oU-8e1"/>
                 <constraint firstItem="htf-kG-sAC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="t5o-C3-v9d"/>
-                <constraint firstItem="vtb-7N-tjB" firstAttribute="bottom" secondItem="htf-kG-sAC" secondAttribute="bottom" constant="-150" id="wDv-ri-xrH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>

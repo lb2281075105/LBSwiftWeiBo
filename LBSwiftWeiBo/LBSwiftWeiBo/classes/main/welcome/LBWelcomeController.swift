@@ -28,7 +28,8 @@ class LBWelcomeController: UIViewController {
         
         // 执行动画
         // initialSpringVelocity : 初始化速度
-        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5.0, options: [], animations: { () -> Void in
+        UIView.animate(withDuration: 2.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5.0, options: [], animations: { () -> Void in
+            // 需要的时候进行布局
             self.view.layoutIfNeeded()
         }) { (_) -> Void in
             // 加载main.storyboard(
