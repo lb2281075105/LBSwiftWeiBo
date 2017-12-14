@@ -55,7 +55,7 @@ extension LBNetWork{
     
 }
 extension LBNetWork {
-    func loadAccessToken(code : String, completion : @escaping (_ result : [String : AnyObject]?,_ error : Bool) -> ()) {
+    func loadAccessToken(code : String, completion : @escaping (_ result : [String : AnyObject]?,_ isSuccess : Bool) -> ()) {
         // 获取请求的URLString
         let urlString = "https://api.weibo.com/oauth2/access_token"
         
@@ -65,6 +65,21 @@ extension LBNetWork {
         // 发送网络请求
         request(requestType: .POST, urlString: urlString, parameters: parameters as [String : AnyObject]) { (result, isSuccess) in
             completion(result as? [String : AnyObject], isSuccess)
+        }
+    }
+}
+// 请求用户的信息
+extension LBNetWork {
+    func loadUserInfo(access_token : String, uid : String, completion : @escaping (_ result : [String : AnyObject]?,_ isSuccess : Bool) -> ()) {
+        // 获取请求的URLString
+        let urlString = "https://api.weibo.com/2/users/show.json"
+        
+        // 获取请求的参数
+        let parameters = ["access_token" : access_token, "uid" : uid]
+        
+        // 发送网络请求
+        request(requestType: .GET, urlString: urlString, parameters: parameters as [String : AnyObject]) { (result, isSuccess) -> () in
+            completion(result as? [String : AnyObject] , isSuccess)
         }
     }
 }

@@ -116,7 +116,42 @@ extension LBOauthController {
             }
             let account = LBUserAccount(dict: accountDict)
             
-            print(account)
+            // 请求用户信息
+            // 在回调里面调用方法需要加上self
+            self.loadUserInfo(account: account)
+        }
+    }
+    
+    
+    // 请求用户信息
+    func loadUserInfo(account : LBUserAccount) {
+        // 获取AccessToken
+        guard let accessToken = account.access_token else {
+            return
+        }
+        
+        // 获取uid
+        guard let uid = account.uid else {
+            return
+        }
+        
+        // 发送网络请求
+        LBNetWork.shareInstance.loadUserInfo(access_token: accessToken, uid: uid) { (result, isSuccess) -> () in
+            // 错误结果
+            if isSuccess == false {
+                print(isSuccess)
+                return
+            }
+            
+            guard let userInfoDict = result else {
+                return
+            }
+            
+            // 从字典中取出昵称和用户头像地址
+            account.screen_name = userInfoDict["screen_name"] as? String
+            account.avatar_large = userInfoDict["avatar_large"] as? String
+            
+            print(result)
         }
     }
 }
