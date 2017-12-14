@@ -43,6 +43,8 @@ extension LBBaseTableController {
     }
     // 登录
     @objc func loginBtnClick() {
-        print("loginBtnClick")
+        let oauth = LBOauthController()
+        let oauthNav = UINavigationController(rootViewController: oauth)
+        present(oauthNav, animated: true, completion: nil)
     }
 }
