@@ -40,6 +40,7 @@
 		F8EAC8471FE22B550020ABC1 /* LBWelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC8451FE22B550020ABC1 /* LBWelcomeController.swift */; };
 		F8EAC8481FE22B550020ABC1 /* LBWelcomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8EAC8461FE22B550020ABC1 /* LBWelcomeController.xib */; };
 		F8EAC84A1FE22D9C0020ABC1 /* LBUserAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC8491FE22D9C0020ABC1 /* LBUserAViewModel.swift */; };
+		F8EAC84D1FE26E770020ABC1 /* LBHStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC84C1FE26E770020ABC1 /* LBHStatusModel.swift */; };
 		F8F152D31FE11D2100308110 /* LBPopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F152D21FE11D2100308110 /* LBPopoverAnimator.swift */; };
 		F8F152D61FE140F700308110 /* LBNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F152D51FE140F700308110 /* LBNetWork.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		F8EAC8451FE22B550020ABC1 /* LBWelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBWelcomeController.swift; sourceTree = "<group>"; };
 		F8EAC8461FE22B550020ABC1 /* LBWelcomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LBWelcomeController.xib; sourceTree = "<group>"; };
 		F8EAC8491FE22D9C0020ABC1 /* LBUserAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBUserAViewModel.swift; sourceTree = "<group>"; };
+		F8EAC84C1FE26E770020ABC1 /* LBHStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHStatusModel.swift; sourceTree = "<group>"; };
 		F8F152D21FE11D2100308110 /* LBPopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPopoverAnimator.swift; sourceTree = "<group>"; };
 		F8F152D51FE140F700308110 /* LBNetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBNetWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +184,7 @@
 		3A8488EB1FD5905300317124 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				F8EAC84B1FE26DD60020ABC1 /* LBHomeModel */,
 				F84CA4921FDE6474000B5687 /* popView */,
 				F84CA4831FDE51E5000B5687 /* LBHome.storyboard */,
 				3A8488F71FD59B1800317124 /* LBHomeTabVController.swift */,
@@ -293,6 +296,14 @@
 				F8EAC8461FE22B550020ABC1 /* LBWelcomeController.xib */,
 			);
 			path = welcome;
+			sourceTree = "<group>";
+		};
+		F8EAC84B1FE26DD60020ABC1 /* LBHomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8EAC84C1FE26E770020ABC1 /* LBHStatusModel.swift */,
+			);
+			path = LBHomeModel;
 			sourceTree = "<group>";
 		};
 		F8F152D41FE140B100308110 /* netWork */ = {
@@ -458,6 +469,7 @@
 				F8BDDF781FD9280200328298 /* LBBaseTableController.swift in Sources */,
 				3A8488F41FD59AF500317124 /* LBProfileTabVController.swift in Sources */,
 				3A8488D81FD58A8D00317124 /* AppDelegate.swift in Sources */,
+				F8EAC84D1FE26E770020ABC1 /* LBHStatusModel.swift in Sources */,
 				F8BDDF7B1FD92C1100328298 /* LBVisibleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
