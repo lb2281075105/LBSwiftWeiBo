@@ -90,7 +90,27 @@ extension LBOauthController : UIWebViewDelegate {
         }
         print("code=" + code)
         // 请求accessToken
+        loadAccessToken(code: code)
         
         return false
+    }
+}
+
+extension LBOauthController {
+    /// 请求AccessToken
+    func loadAccessToken(code : String) {
+        LBNetWork.shareInstance.loadAccessToken(code: code) { (result, isSuccess) in
+            // 错误校验
+            if isSuccess == false {
+                print(isSuccess)
+                return
+            }
+            
+            // 正确获取
+            /*
+             ["expires_in": 157679999, "access_token": 2.00LoeuYGxtnivD584d955f18VkZKMB, "remind_in": 157679999, "isRealName": true, "uid": 6012695655]
+            */
+            print(result)
+        }
     }
 }
