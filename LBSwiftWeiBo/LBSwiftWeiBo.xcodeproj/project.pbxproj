@@ -36,6 +36,7 @@
 		F8EAC83A1FE202B60020ABC1 /* LBHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC8391FE202B60020ABC1 /* LBHeader.swift */; };
 		F8EAC8401FE20B1A0020ABC1 /* LBOauthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC83E1FE20B1A0020ABC1 /* LBOauthController.swift */; };
 		F8EAC8411FE20B1A0020ABC1 /* LBOauthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8EAC83F1FE20B1A0020ABC1 /* LBOauthController.xib */; };
+		F8EAC8431FE221A80020ABC1 /* LBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC8421FE221A80020ABC1 /* LBUserAccount.swift */; };
 		F8F152D31FE11D2100308110 /* LBPopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F152D21FE11D2100308110 /* LBPopoverAnimator.swift */; };
 		F8F152D61FE140F700308110 /* LBNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F152D51FE140F700308110 /* LBNetWork.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		F8EAC8391FE202B60020ABC1 /* LBHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHeader.swift; sourceTree = "<group>"; };
 		F8EAC83E1FE20B1A0020ABC1 /* LBOauthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBOauthController.swift; sourceTree = "<group>"; };
 		F8EAC83F1FE20B1A0020ABC1 /* LBOauthController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LBOauthController.xib; sourceTree = "<group>"; };
+		F8EAC8421FE221A80020ABC1 /* LBUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBUserAccount.swift; sourceTree = "<group>"; };
 		F8F152D21FE11D2100308110 /* LBPopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPopoverAnimator.swift; sourceTree = "<group>"; };
 		F8F152D51FE140F700308110 /* LBNetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBNetWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -271,6 +273,7 @@
 			children = (
 				F8EAC83E1FE20B1A0020ABC1 /* LBOauthController.swift */,
 				F8EAC83F1FE20B1A0020ABC1 /* LBOauthController.xib */,
+				F8EAC8421FE221A80020ABC1 /* LBUserAccount.swift */,
 			);
 			path = Oauth;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				3A8488F61FD59B0B00317124 /* LBMessageTabVController.swift in Sources */,
 				F8F152D61FE140F700308110 /* LBNetWork.swift in Sources */,
 				F84CA4911FDE5ECB000B5687 /* LBTitleButton.swift in Sources */,
+				F8EAC8431FE221A80020ABC1 /* LBUserAccount.swift in Sources */,
 				F84CA48F1FDE5E01000B5687 /* UIBarButtonItem+Extension.swift in Sources */,
 				F8EAC8401FE20B1A0020ABC1 /* LBOauthController.swift in Sources */,
 				3A8488FA1FD59B2900317124 /* LBDiscoverTabVController.swift in Sources */,

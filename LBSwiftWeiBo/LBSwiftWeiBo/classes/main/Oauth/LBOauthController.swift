@@ -110,7 +110,13 @@ extension LBOauthController {
             /*
              ["expires_in": 157679999, "access_token": 2.00LoeuYGxtnivD584d955f18VkZKMB, "remind_in": 157679999, "isRealName": true, "uid": 6012695655]
             */
-            print(result)
+            guard let accountDict = result else {
+                print("没有获取授权后的数据")
+                return
+            }
+            let account = LBUserAccount(dict: accountDict)
+            
+            print(account)
         }
     }
 }
