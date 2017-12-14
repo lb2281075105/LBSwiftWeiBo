@@ -6,14 +6,14 @@
 
 
 ##### 微博 -- Swift版本 -- 第二天<br>
-1、添加访客视图
-2、导航栏设置、titleView弹出框实现
-3、pod 的使用：首先安装pod，在项目根目录中pod init初始化，在profile文件中添加我们需要的框架名称，pod install即可
-4、Swift网络请求封装
-5、成为微博开发者，根据微博url获取code，再根据code获取access_token，根据access_token等信息获取用户个人信息
-6、对于获取到的用户信息进行归档、解档处理
-7、单利、计算属性的使用，??、guard else{}的使用
-8、欢迎页头像动画实现、欢迎页和主页之间切换
+1、添加访客视图<br>
+2、导航栏设置、titleView弹出框实现<br>
+3、pod 的使用：首先安装pod，在项目根目录中pod init初始化，在profile文件中添加我们需要的框架名称，pod install即可<br>
+4、Swift网络请求封装<br>
+5、成为微博开发者，根据微博url获取code，再根据code获取access_token，根据access_token等信息获取用户个人信息<br>
+6、对于获取到的用户信息进行归档、解档处理<br>
+7、单利、计算属性的使用，??、guard else{}的使用<br>
+8、欢迎页头像动画实现、欢迎页和主页之间切换<br>
 
 
 
