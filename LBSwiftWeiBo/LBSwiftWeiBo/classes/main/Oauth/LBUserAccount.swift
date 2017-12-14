@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LBUserAccount: NSObject {
+class LBUserAccount: NSObject,NSCoding{
     // 授权AccessToken
     var access_token : String?
     // 过期时间-->秒
@@ -47,11 +47,12 @@ class LBUserAccount: NSObject {
     }
     
     // 归档方法
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encode(access_token, forKey: "access_token")
-        aCoder.encode(uid, forKey: "uid")
-        aCoder.encode(expires_date, forKey: "expires_date")
-        aCoder.encode(avatar_large, forKey: "avatar_large")
-        aCoder.encode(screen_name, forKey: "screen_name")
+    func encode(with aCoder: NSCoder){
+        aCoder.encode(self.access_token, forKey: "access_token")
+        aCoder.encode(self.uid, forKey: "uid")
+        aCoder.encode(self.expires_date, forKey: "expires_date")
+        aCoder.encode(self.avatar_large, forKey: "avatar_large")
+        aCoder.encode(self.screen_name, forKey: "screen_name")
     }
+    
 }

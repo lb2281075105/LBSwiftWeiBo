@@ -151,15 +151,17 @@ extension LBOauthController {
             account.screen_name = userInfoDict["screen_name"] as? String
             account.avatar_large = userInfoDict["avatar_large"] as? String
             
-            print(result ?? "")
-            
             // 获取沙盒路径
             var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
             accountPath = (accountPath as NSString).appendingPathComponent("lbuserAccount.plist")
-            print("打印沙盒路径" + accountPath)
+            print("打印沙盒路径" + LBUserAViewModel.shareIntance.accountPath)
             
             // 保存对象
-            NSKeyedArchiver.archiveRootObject(account, toFile: accountPath)
+            NSKeyedArchiver.archiveRootObject(account, toFile: LBUserAViewModel.shareIntance.accountPath)
+            LBUserAViewModel.shareIntance.account = account
+            self.dismiss(animated: false, completion: { () -> Void in
+                UIApplication.shared.keyWindow?.rootViewController = LBWelcomeController()
+            })
         }
     }
 }

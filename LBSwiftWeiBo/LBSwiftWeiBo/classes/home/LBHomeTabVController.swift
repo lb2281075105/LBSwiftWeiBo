@@ -17,9 +17,9 @@ class LBHomeTabVController: LBBaseTableController {
         super.viewDidLoad()
 
         visitorView.addRotationAnim()
-//        if !isLogin {
-//            return
-//        }
+        if !isLogin {
+            return
+        }
         setupNavigationBar()
     }
 }

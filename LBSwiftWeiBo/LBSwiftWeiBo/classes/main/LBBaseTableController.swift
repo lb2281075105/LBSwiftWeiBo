@@ -11,7 +11,7 @@ import UIKit
 class LBBaseTableController: UITableViewController {
     // 懒加载
     lazy var visitorView : LBVisibleView = LBVisibleView.visitorView()
-    var isLogin : Bool = false
+    var isLogin : Bool = LBUserAViewModel.shareIntance.isLogin
     override func loadView() {
         isLogin ? super.loadView() : setUpVisitorView()
     }

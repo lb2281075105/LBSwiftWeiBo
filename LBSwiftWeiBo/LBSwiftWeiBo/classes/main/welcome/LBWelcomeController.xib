@@ -56,6 +56,6 @@
     </objects>
     <resources>
         <image name="ad_background" width="375" height="667"/>
-        <image name="avatar_default_big" width="16" height="16"/>
+        <image name="avatar_default_big" width="85" height="85"/>
     </resources>
 </document>
