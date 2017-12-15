@@ -1,8 +1,8 @@
 # LBSwiftWeiBo
 #### 微博 -- Swift版本
 
-
-
+##### 微博 -- Swift版本 -- 第三天<br>
+1、ViewModel是对model的封装，存储属性一般放在model，其他属性处理放在ViewModel里面
 
 
 ##### 微博 -- Swift版本 -- 第二天<br>
