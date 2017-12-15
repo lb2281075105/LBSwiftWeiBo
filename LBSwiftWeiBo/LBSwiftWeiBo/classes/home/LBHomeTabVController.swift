@@ -13,7 +13,7 @@ class LBHomeTabVController: LBBaseTableController {
     lazy var popoverAnimator : LBPopoverAnimator = LBPopoverAnimator {[weak self] (presented) -> () in
         self?.titleBtn.isSelected = presented
     }
-    lazy var statuses : [LBHStatusModel] = [LBHStatusModel]()
+    lazy var viewModels : [LBHStatusViewModel] = [LBHStatusViewModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -78,8 +78,10 @@ extension LBHomeTabVController{
             // 遍历微博对应的字典
             for statusDict in resultArray {
                 let status = LBHStatusModel(dict: statusDict)
-                self.statuses.append(status)
+                let viewModel = LBHStatusViewModel(status: status)
+                self.viewModels.append(viewModel)
             }
+            
             // 刷新表视图
             self.tableView.reloadData()
         }
@@ -88,7 +90,7 @@ extension LBHomeTabVController{
 
 extension LBHomeTabVController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statuses.count
+        return viewModels.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -96,8 +98,8 @@ extension LBHomeTabVController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LBHomeCell")
         
         // 给cell设置数据
-        let status = statuses[indexPath.row]
-        cell?.textLabel?.text = status.created_at
+        let viewModel = viewModels[indexPath.row]
+        cell?.textLabel?.text = viewModel.sourceText
         
         return cell!
     }

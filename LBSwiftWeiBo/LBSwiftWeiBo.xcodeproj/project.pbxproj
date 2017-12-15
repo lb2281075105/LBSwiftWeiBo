@@ -31,6 +31,8 @@
 		F84CA4951FDE648D000B5687 /* LBPopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84CA4931FDE648D000B5687 /* LBPopController.swift */; };
 		F84CA4961FDE648D000B5687 /* LBPopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84CA4941FDE648D000B5687 /* LBPopController.xib */; };
 		F84CA4981FDE6BF1000B5687 /* LBPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84CA4971FDE6BF1000B5687 /* LBPresentationController.swift */; };
+		F8843EAC1FE392D5001657EA /* LBHStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8843EAB1FE392D5001657EA /* LBHStatusViewModel.swift */; };
+		F8843EAE1FE3934C001657EA /* LBHUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8843EAD1FE3934C001657EA /* LBHUserModel.swift */; };
 		F8BDDF781FD9280200328298 /* LBBaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDF771FD9280200328298 /* LBBaseTableController.swift */; };
 		F8BDDF7B1FD92C1100328298 /* LBVisibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */; };
 		F8EAC83A1FE202B60020ABC1 /* LBHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC8391FE202B60020ABC1 /* LBHeader.swift */; };
@@ -75,6 +77,8 @@
 		F84CA4931FDE648D000B5687 /* LBPopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPopController.swift; sourceTree = "<group>"; };
 		F84CA4941FDE648D000B5687 /* LBPopController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LBPopController.xib; sourceTree = "<group>"; };
 		F84CA4971FDE6BF1000B5687 /* LBPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPresentationController.swift; sourceTree = "<group>"; };
+		F8843EAB1FE392D5001657EA /* LBHStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHStatusViewModel.swift; sourceTree = "<group>"; };
+		F8843EAD1FE3934C001657EA /* LBHUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHUserModel.swift; sourceTree = "<group>"; };
 		F8BDDF771FD9280200328298 /* LBBaseTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBBaseTableController.swift; sourceTree = "<group>"; };
 		F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBVisibleView.swift; sourceTree = "<group>"; };
 		F8EAC8391FE202B60020ABC1 /* LBHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHeader.swift; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				F8EAC84C1FE26E770020ABC1 /* LBHStatusModel.swift */,
+				F8843EAB1FE392D5001657EA /* LBHStatusViewModel.swift */,
+				F8843EAD1FE3934C001657EA /* LBHUserModel.swift */,
 			);
 			path = LBHomeModel;
 			sourceTree = "<group>";
@@ -469,7 +475,9 @@
 				F8EAC83A1FE202B60020ABC1 /* LBHeader.swift in Sources */,
 				3A8488F21FD5988B00317124 /* LBMainTabBarController.swift in Sources */,
 				F8EAC8471FE22B550020ABC1 /* LBWelcomeController.swift in Sources */,
+				F8843EAC1FE392D5001657EA /* LBHStatusViewModel.swift in Sources */,
 				3A8488F81FD59B1800317124 /* LBHomeTabVController.swift in Sources */,
+				F8843EAE1FE3934C001657EA /* LBHUserModel.swift in Sources */,
 				F8BDDF781FD9280200328298 /* LBBaseTableController.swift in Sources */,
 				3A8488F41FD59AF500317124 /* LBProfileTabVController.swift in Sources */,
 				3A8488D81FD58A8D00317124 /* AppDelegate.swift in Sources */,
