@@ -18,7 +18,7 @@ class LBHStatusModel: NSObject {
             }
             
             // 对时间处理
-            createAtText = NSDate.createDateString(created_at)
+            createAtText = NSDate.createDateString(createAtStr: created_at)
         }
     }
     // 微博来源
