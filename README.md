@@ -2,7 +2,7 @@
 #### 微博 -- Swift版本
 
 ##### 微博 -- Swift版本 -- 第三天<br>
-1、ViewModel是对model的封装，存储属性一般放在model，其他属性处理放在ViewModel里面
+1、ViewModel是对model的封装，存储属性一般放在model，其他属性处理放在ViewModel里面<br>
 2、if let {}、guard let else{}、?? ""的使用，这三种方法经常使用，熟悉使用场景
 
 ##### 微博 -- Swift版本 -- 第二天<br>
