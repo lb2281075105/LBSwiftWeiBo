@@ -24,6 +24,9 @@ class LBHomeTabVController: LBBaseTableController {
         setupNavigationBar()
         // 请求数据
         loadStatuses()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 400
     }
 }
 extension LBHomeTabVController {
@@ -95,12 +98,11 @@ extension LBHomeTabVController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 创建cell:在storyboard中添加cell,并设置Identifier
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LBHomeCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LBHomeCell") as!LBHomeTableVCell
         
         // 给cell设置数据
-        let viewModel = viewModels[indexPath.row]
-        cell?.textLabel?.text = viewModel.sourceText
+        cell.viewModel = viewModels[indexPath.row]
         
-        return cell!
+        return cell
     }
 }

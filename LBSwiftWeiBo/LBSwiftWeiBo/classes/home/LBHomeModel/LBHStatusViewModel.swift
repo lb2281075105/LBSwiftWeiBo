@@ -20,8 +20,8 @@ class LBHStatusViewModel: NSObject {
     var verifiedImage : UIImage?
     // 处理用户会员等级
     var vipImage : UIImage?
-    
-    
+    // 处理用户头像的地址
+    var profileURL : NSURL?
     // 自定义构造函数
     init(status : LBHStatusModel) {
         self.status = status
