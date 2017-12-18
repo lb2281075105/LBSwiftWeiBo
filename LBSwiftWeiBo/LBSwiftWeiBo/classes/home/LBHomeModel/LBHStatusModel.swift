@@ -19,6 +19,8 @@ class LBHStatusModel: NSObject {
     var mid : Int = 0
     // 用户model
     var user : LBHUserModel?
+    // 用户微博的配图
+    var pic_urls : [[String : String]]?
     // 自定义构造函数
     init(dict : [String : AnyObject]) {
         super.init()

@@ -89,7 +89,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天天气不错噢" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TN-b2-hJY" userLabel="微博正文">
-                                            <rect key="frame" x="15" y="65" width="105" height="230"/>
+                                            <rect key="frame" x="15" y="65" width="105" height="146"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="105" id="bUm-Gh-cfr"/>
                                             </constraints>
@@ -170,9 +170,35 @@
                                                 <constraint firstItem="00l-p1-hsA" firstAttribute="height" secondItem="TXX-ly-04G" secondAttribute="height" id="y0A-Vn-4NQ"/>
                                             </constraints>
                                         </view>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hkY-Jr-Vhe">
+                                            <rect key="frame" x="16" y="221" width="240" height="74"/>
+                                            <color key="backgroundColor" red="1" green="0.4388735701" blue="0.21729926599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="74" id="3kY-no-QjO"/>
+                                                <constraint firstAttribute="width" constant="240" id="raw-EV-EcZ"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TLQ-ZA-gmo">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2vT-9C-IGM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </view>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ewn-0W-p2z" firstAttribute="top" secondItem="3TN-b2-hJY" secondAttribute="bottom" constant="10" id="6S8-7d-5oH"/>
+                                        <constraint firstItem="hkY-Jr-Vhe" firstAttribute="leading" secondItem="3TN-b2-hJY" secondAttribute="trailing" constant="-104" id="1OT-8P-FNc"/>
+                                        <constraint firstItem="hkY-Jr-Vhe" firstAttribute="top" secondItem="3TN-b2-hJY" secondAttribute="bottom" constant="10" id="2C3-D4-ddK"/>
+                                        <constraint firstItem="hkY-Jr-Vhe" firstAttribute="bottom" secondItem="ewn-0W-p2z" secondAttribute="top" constant="-10" id="3WT-Qg-eCD"/>
                                         <constraint firstItem="9vh-5H-sF2" firstAttribute="top" secondItem="ZVX-wn-Bf5" secondAttribute="top" constant="10" id="6Yw-Dh-AIR"/>
                                         <constraint firstAttribute="bottom" secondItem="ewn-0W-p2z" secondAttribute="bottom" id="8Nl-vm-PaX"/>
                                         <constraint firstItem="NkK-lN-Azs" firstAttribute="leading" secondItem="H3b-BI-G0s" secondAttribute="trailing" constant="8" id="B7F-dH-TMQ"/>
@@ -204,6 +230,8 @@
                                     <outlet property="contentLabel" destination="3TN-b2-hJY" id="wqJ-6c-y9T"/>
                                     <outlet property="contentLabelWCons" destination="bUm-Gh-cfr" id="xJ8-au-fBF"/>
                                     <outlet property="iconView" destination="9vh-5H-sF2" id="cau-nx-KDQ"/>
+                                    <outlet property="picViewHCons" destination="3kY-no-QjO" id="HbW-t0-X3x"/>
+                                    <outlet property="picViewWCons" destination="raw-EV-EcZ" id="4Hc-pc-MgU"/>
                                     <outlet property="screenNameLabel" destination="H3b-BI-G0s" id="Wxx-IM-SiA"/>
                                     <outlet property="sourceLabel" destination="rGN-wQ-oRt" id="Z5H-5V-1fm"/>
                                     <outlet property="timeLabel" destination="5fi-jn-Sjw" id="Utd-tH-cF1"/>

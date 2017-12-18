@@ -22,6 +22,8 @@ class LBHStatusViewModel: NSObject {
     var vipImage : UIImage?
     // 处理用户头像的地址
     var profileURL : NSURL?
+    // 处理微博配图的数据
+    var picURLs : [NSURL] = [NSURL]()
     // 自定义构造函数
     init(status : LBHStatusModel) {
         self.status = status
@@ -58,6 +60,15 @@ class LBHStatusViewModel: NSObject {
         let mbrank = status.user?.mbrank ?? 0
         if mbrank > 0 && mbrank <= 6 {
             vipImage = UIImage(named: "common_icon_membership_level\(mbrank)")
+        }
+        // 用户配图
+        if let picURLDicts = status.pic_urls {
+            for picURLDict in picURLDicts {
+                guard let picURLString = picURLDict["thumbnail_pic"] else {
+                    continue
+                }
+                picURLs.append(NSURL(string: picURLString)!)
+            }
         }
     }
 }
