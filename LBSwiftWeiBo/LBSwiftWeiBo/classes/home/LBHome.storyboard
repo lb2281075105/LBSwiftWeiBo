@@ -88,7 +88,7 @@
                                             <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天天气不错噢" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TN-b2-hJY" userLabel="微博正文">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="努力努力" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TN-b2-hJY" userLabel="微博正文">
                                             <rect key="frame" x="15" y="65" width="105" height="146"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="105" id="bUm-Gh-cfr"/>
@@ -170,7 +170,7 @@
                                                 <constraint firstItem="00l-p1-hsA" firstAttribute="height" secondItem="TXX-ly-04G" secondAttribute="height" id="y0A-Vn-4NQ"/>
                                             </constraints>
                                         </view>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hkY-Jr-Vhe">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hkY-Jr-Vhe" customClass="LBImageCollectionView" customModule="LBSwiftWeiBo" customModuleProvider="target">
                                             <rect key="frame" x="16" y="221" width="240" height="74"/>
                                             <color key="backgroundColor" red="1" green="0.4388735701" blue="0.21729926599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -184,13 +184,27 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2vT-9C-IGM">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LBImageCollectionCell" id="2vT-9C-IGM" customClass="LBImageCollectionCell" customModule="LBSwiftWeiBo" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5f5-5a-jrr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            </imageView>
+                                                        </subviews>
                                                     </view>
+                                                    <constraints>
+                                                        <constraint firstItem="5f5-5a-jrr" firstAttribute="top" secondItem="2vT-9C-IGM" secondAttribute="top" id="hCW-P0-aRq"/>
+                                                        <constraint firstAttribute="bottom" secondItem="5f5-5a-jrr" secondAttribute="bottom" id="tBn-eE-ILy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5f5-5a-jrr" secondAttribute="trailing" id="tVZ-Xm-8Bh"/>
+                                                        <constraint firstItem="5f5-5a-jrr" firstAttribute="leading" secondItem="2vT-9C-IGM" secondAttribute="leading" id="xEA-Vb-vvX"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="iconView" destination="5f5-5a-jrr" id="dQ6-8M-OF6"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -230,6 +244,7 @@
                                     <outlet property="contentLabel" destination="3TN-b2-hJY" id="wqJ-6c-y9T"/>
                                     <outlet property="contentLabelWCons" destination="bUm-Gh-cfr" id="xJ8-au-fBF"/>
                                     <outlet property="iconView" destination="9vh-5H-sF2" id="cau-nx-KDQ"/>
+                                    <outlet property="picCollectionView" destination="hkY-Jr-Vhe" id="Qvn-JM-Vzm"/>
                                     <outlet property="picViewHCons" destination="3kY-no-QjO" id="HbW-t0-X3x"/>
                                     <outlet property="picViewWCons" destination="raw-EV-EcZ" id="4Hc-pc-MgU"/>
                                     <outlet property="screenNameLabel" destination="H3b-BI-G0s" id="Wxx-IM-SiA"/>
@@ -249,7 +264,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wa-Kc-L6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="-1218"/>
+            <point key="canvasLocation" x="1144.8" y="-1218.440779610195"/>
         </scene>
     </scenes>
     <resources>

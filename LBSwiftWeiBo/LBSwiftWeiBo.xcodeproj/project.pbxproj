@@ -34,6 +34,7 @@
 		F8843EAC1FE392D5001657EA /* LBHStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8843EAB1FE392D5001657EA /* LBHStatusViewModel.swift */; };
 		F8843EAE1FE3934C001657EA /* LBHUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8843EAD1FE3934C001657EA /* LBHUserModel.swift */; };
 		F8843EB01FE3C57B001657EA /* LBHomeTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8843EAF1FE3C57B001657EA /* LBHomeTableVCell.swift */; };
+		F8AFEBA31FE7AE4D00610922 /* LBImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFEBA21FE7AE4D00610922 /* LBImageCollectionView.swift */; };
 		F8BDDF781FD9280200328298 /* LBBaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDF771FD9280200328298 /* LBBaseTableController.swift */; };
 		F8BDDF7B1FD92C1100328298 /* LBVisibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */; };
 		F8EAC83A1FE202B60020ABC1 /* LBHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAC8391FE202B60020ABC1 /* LBHeader.swift */; };
@@ -81,6 +82,7 @@
 		F8843EAB1FE392D5001657EA /* LBHStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHStatusViewModel.swift; sourceTree = "<group>"; };
 		F8843EAD1FE3934C001657EA /* LBHUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHUserModel.swift; sourceTree = "<group>"; };
 		F8843EAF1FE3C57B001657EA /* LBHomeTableVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHomeTableVCell.swift; sourceTree = "<group>"; };
+		F8AFEBA21FE7AE4D00610922 /* LBImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBImageCollectionView.swift; sourceTree = "<group>"; };
 		F8BDDF771FD9280200328298 /* LBBaseTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBBaseTableController.swift; sourceTree = "<group>"; };
 		F8BDDF7A1FD92C1100328298 /* LBVisibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBVisibleView.swift; sourceTree = "<group>"; };
 		F8EAC8391FE202B60020ABC1 /* LBHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHeader.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				F84CA4831FDE51E5000B5687 /* LBHome.storyboard */,
 				3A8488F71FD59B1800317124 /* LBHomeTabVController.swift */,
 				F8843EAF1FE3C57B001657EA /* LBHomeTableVCell.swift */,
+				F8AFEBA21FE7AE4D00610922 /* LBImageCollectionView.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				F8EAC84F1FE278210020ABC1 /* NSDate+Extension.swift in Sources */,
 				F8EAC8431FE221A80020ABC1 /* LBUserAccount.swift in Sources */,
 				F84CA48F1FDE5E01000B5687 /* UIBarButtonItem+Extension.swift in Sources */,
+				F8AFEBA31FE7AE4D00610922 /* LBImageCollectionView.swift in Sources */,
 				F8EAC8401FE20B1A0020ABC1 /* LBOauthController.swift in Sources */,
 				3A8488FA1FD59B2900317124 /* LBDiscoverTabVController.swift in Sources */,
 				F84CA4951FDE648D000B5687 /* LBPopController.swift in Sources */,

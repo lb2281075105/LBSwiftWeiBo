@@ -21,12 +21,18 @@ class LBHomeTableVCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var contentLabelWCons: NSLayoutConstraint!
     
+    @IBOutlet weak var picCollectionView: LBImageCollectionView!
     @IBOutlet weak var picViewHCons: NSLayoutConstraint!
     @IBOutlet weak var picViewWCons: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
         // 设置微博正文的宽度约束
         contentLabelWCons.constant = UIScreen.main.bounds.width - 2 * edgeMargin
+        // 流水布局,设置单元格的大小
+        let layout = picCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let imageViewWH = (UIScreen.main.bounds.width - 2 * edgeMargin - 2 * itemMargin) / 3
+        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
+        print(layout.itemSize);
     }
     var viewModel : LBHStatusViewModel? {
         didSet {
@@ -37,7 +43,7 @@ class LBHomeTableVCell: UITableViewCell {
             
             // 设置头像
 //            iconView.sd_setImage(with: viewModel.profileURL! as URL, placeholderImage: UIImage(named: "avatar_default_small"))
-//            
+            
             // 设置认证的图标
             verifiedView.image = viewModel.verifiedImage
             
@@ -60,7 +66,8 @@ class LBHomeTableVCell: UITableViewCell {
             let picViewSize = calculatePicViewSize(count: viewModel.picURLs.count)
             picViewWCons.constant = picViewSize.width
             picViewHCons.constant = picViewSize.height
-            print(viewModel.picURLs.count);
+            
+            picCollectionView.picURLs = viewModel.picURLs
         }
     }
 
