@@ -32,7 +32,6 @@ class LBHomeTableVCell: UITableViewCell {
         let layout = picCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let imageViewWH = (UIScreen.main.bounds.width - 2 * edgeMargin - 2 * itemMargin) / 3
         layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
-        print(layout.itemSize);
     }
     var viewModel : LBHStatusViewModel? {
         didSet {
