@@ -365,7 +365,7 @@
 				TargetAttributes = {
 					3A8488D31FD58A8D00317124 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 9266GAZZ3C;
+						DevelopmentTeam = MECQS3Z269;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -606,7 +606,7 @@
 			baseConfigurationReference = 6D6C808570851375722933A6 /* Pods-LBSwiftWeiBo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 9266GAZZ3C;
+				DEVELOPMENT_TEAM = MECQS3Z269;
 				INFOPLIST_FILE = LBSwiftWeiBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -622,7 +622,7 @@
 			baseConfigurationReference = A32F606E74006A2B9DD2CF65 /* Pods-LBSwiftWeiBo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 9266GAZZ3C;
+				DEVELOPMENT_TEAM = MECQS3Z269;
 				INFOPLIST_FILE = LBSwiftWeiBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
