@@ -24,8 +24,9 @@ class LBHomeTabVController: LBBaseTableController {
         setupNavigationBar()
         // 请求数据
         loadStatuses()
-        
+        // 行高自动适应
         tableView.rowHeight = UITableViewAutomaticDimension
+        // 预估行高
         tableView.estimatedRowHeight = 400
     }
 }

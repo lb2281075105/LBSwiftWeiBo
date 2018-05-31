@@ -44,7 +44,7 @@ class LBImageCollectionCell : UICollectionViewCell {
             guard let picURL = picURL else {
                 return
             }
-            
+
             iconView.sd_setImage(with: picURL as URL, placeholderImage: UIImage(named: "empty_picture"))
         }
     }
