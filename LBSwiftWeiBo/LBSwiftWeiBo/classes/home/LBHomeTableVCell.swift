@@ -81,8 +81,26 @@ extension LBHomeTableVCell {
             return CGSize.zero
         }
         
+        // 取出picCollectionView对应的layout
+        let layout = picCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        // 单张配图
+        if count == 1 {
+            // 取出图片
+            let urlString = viewModel?.picURLs.last?.absoluteString
+            let image = SDWebImageManager.shared().imageCache?.imageFromDiskCache(forKey: urlString)
+            
+            // 设置一张图片是layout的itemSize
+            layout.itemSize = CGSize(width: (image?.size.width)! * 2, height: (image?.size.height)! * 2)
+            
+            return CGSize(width: image!.size.width * 2, height: image!.size.height * 2)
+        }
+        
         // 计算出来imageViewWH
         let imageViewWH = (UIScreen.main.bounds.width - 2 * edgeMargin - 2 * itemMargin) / 3
+        
+        // 设置其他张图片时layout的itemSize
+        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
         
         // 四张配图
         if count == 4 {
