@@ -20,9 +20,22 @@ class LBHomeTableVCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var contentLabelWCons: NSLayoutConstraint!
+    // 转发微博文本
+    @IBOutlet weak var retweetedContentLabel: UILabel!
+    // 转发微博背景视图
+    @IBOutlet weak var retweetedBgView: UIView!
+    // 底部工具栏视图
+    @IBOutlet weak var bottomToolView: UIView!
+    // 集合视图到工具栏间距
+    @IBOutlet weak var picViewBottomCons: NSLayoutConstraint!
+    // 转发微博文本到原创微博文本底部的间距
+    @IBOutlet weak var retweetedContentLabelTopCons: NSLayoutConstraint!
     
+    // 集合视图
     @IBOutlet weak var picCollectionView: LBImageCollectionView!
+    // 集合视图的高度
     @IBOutlet weak var picViewHCons: NSLayoutConstraint!
+    // 集合视图的宽度
     @IBOutlet weak var picViewWCons: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -70,6 +83,39 @@ class LBHomeTableVCell: UITableViewCell {
             picViewHCons.constant = picViewSize.height
             
             picCollectionView.picURLs = viewModel.picURLs
+            
+            // ------------------------- mark -- 转发微博的相关信息 -----------------
+            // 设置转发微博的正文
+            if viewModel.status?.retweeted_status != nil {
+                // 设置转发微博的正文
+                if let screenName = viewModel.status?.retweeted_status?.user?.screen_name, let retweetedText = viewModel.status?.retweeted_status?.text {
+                    retweetedContentLabel.text = "@" + "\(screenName): " + retweetedText
+                    
+                    // 设置转发正文距离顶部的约束
+                    retweetedContentLabelTopCons.constant = 15
+                }
+                
+                // 设置背景显示
+                retweetedBgView.isHidden = false
+            } else {
+                // 设置转发微博的正文
+                retweetedContentLabel.text = nil
+                
+                // 设置背景显示
+                retweetedBgView.isHidden = true
+                
+                // 设置转发正文距离顶部的约束
+                retweetedContentLabelTopCons.constant = 0
+            }
+            
+            // 计算cell的高度
+            if viewModel.cellHeight == 0 {
+                // 强制布局
+                layoutIfNeeded()
+                
+                // 获取底部工具栏的最大Y值
+                viewModel.cellHeight = bottomToolView.frame.maxY
+            }
         }
     }
 

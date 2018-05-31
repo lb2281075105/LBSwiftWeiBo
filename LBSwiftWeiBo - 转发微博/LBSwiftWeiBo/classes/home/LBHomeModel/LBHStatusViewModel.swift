@@ -10,7 +10,7 @@ import UIKit
 // ------------------ 视图模型用来对model里面数据处理，是对model的简单封装 -------
 class LBHStatusViewModel: NSObject {
     var status : LBHStatusModel?
-    
+    var cellHeight : CGFloat = 0
     // 对数据处理的属性
     // 处理来源
     var sourceText : String?

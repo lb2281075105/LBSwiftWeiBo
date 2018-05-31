@@ -16,7 +16,7 @@ class LBHomeTabVController: LBBaseTableController {
     lazy var viewModels : [LBHStatusViewModel] = [LBHStatusViewModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // 没有登录时设置的内容
         visitorView.addRotationAnim()
         if !isLogin {
             return
@@ -24,10 +24,11 @@ class LBHomeTabVController: LBBaseTableController {
         setupNavigationBar()
         // 请求数据
         loadStatuses()
+        // ----------- cellHeight -----------
         // 行高自动适应
         tableView.rowHeight = UITableViewAutomaticDimension
         // 预估行高
-        tableView.estimatedRowHeight = 400
+        tableView.estimatedRowHeight = 200
     }
 }
 extension LBHomeTabVController {
@@ -129,5 +130,11 @@ extension LBHomeTabVController {
         cell.viewModel = viewModels[indexPath.row]
         
         return cell
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // 获取模型对象
+        let viewModel = viewModels[indexPath.row]
+        
+        return viewModel.cellHeight
     }
 }
