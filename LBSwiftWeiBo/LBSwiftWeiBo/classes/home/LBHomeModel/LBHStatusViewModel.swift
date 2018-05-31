@@ -37,7 +37,7 @@ class LBHStatusViewModel: NSObject {
             // 截取字符串
             sourceText = (source as NSString).substring(with: NSRange(location: startIndex, length: length))
         }
-        
+
         // 处理时间
         if let createAt = status.created_at {
             createAtText = NSDate.createDateString(createAtStr: createAt)
@@ -70,5 +70,8 @@ class LBHStatusViewModel: NSObject {
                 picURLs.append(NSURL(string: picURLString)!)
             }
         }
+        // 用户头像
+        let profileURLString = status.user?.profile_image_url ?? ""
+        profileURL = NSURL(string: profileURLString)
     }
 }

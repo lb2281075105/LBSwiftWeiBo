@@ -39,9 +39,12 @@ class LBHomeTableVCell: UITableViewCell {
             guard let viewModel = viewModel else {
                 return
             }
-            
+            // 用户头像nil验证
+            guard let profile_url = viewModel.profileURL else {
+                return;
+            }
             // 设置头像
-//            iconView.sd_setImage(with: viewModel.profileURL! as URL, placeholderImage: UIImage(named: "avatar_default_small"))
+            iconView.sd_setImage(with: profile_url as URL, placeholderImage: UIImage(named: "avatar_default_small"))
             
             // 设置认证的图标
             verifiedView.image = viewModel.verifiedImage
