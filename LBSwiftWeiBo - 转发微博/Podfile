@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'LBSwiftWeiBo' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  # 一定要打开
+  use_frameworks!
+
+  # Pods for LBSwiftWeiBo
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'SnapKit'
+pod 'SVProgressHUD'
+end
