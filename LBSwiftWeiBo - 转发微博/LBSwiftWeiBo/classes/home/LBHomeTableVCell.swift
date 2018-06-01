@@ -42,9 +42,9 @@ class LBHomeTableVCell: UITableViewCell {
         // 设置微博正文的宽度约束
         contentLabelWCons.constant = UIScreen.main.bounds.width - 2 * edgeMargin
         // 流水布局,设置单元格的大小
-        let layout = picCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let imageViewWH = (UIScreen.main.bounds.width - 2 * edgeMargin - 2 * itemMargin) / 3
-        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
+//        let layout = picCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+//        let imageViewWH = (UIScreen.main.bounds.width - 2 * edgeMargin - 2 * itemMargin) / 3
+//        layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
     }
     var viewModel : LBHStatusViewModel? {
         didSet {
@@ -81,7 +81,8 @@ class LBHomeTableVCell: UITableViewCell {
             let picViewSize = calculatePicViewSize(count: viewModel.picURLs.count)
             picViewWCons.constant = picViewSize.width
             picViewHCons.constant = picViewSize.height
-            
+            print("哈哈 我的高度")
+            print(picViewSize.height)
             picCollectionView.picURLs = viewModel.picURLs
             
             // ------------------------- mark -- 转发微博的相关信息 -----------------
@@ -96,13 +97,13 @@ class LBHomeTableVCell: UITableViewCell {
                 }
                 
                 // 设置背景显示
-                retweetedBgView.isHidden = false
+//                retweetedBgView.isHidden = false
             } else {
                 // 设置转发微博的正文
                 retweetedContentLabel.text = nil
                 
                 // 设置背景显示
-                retweetedBgView.isHidden = true
+//                retweetedBgView.isHidden = true
                 
                 // 设置转发正文距离顶部的约束
                 retweetedContentLabelTopCons.constant = 0
@@ -113,19 +114,33 @@ class LBHomeTableVCell: UITableViewCell {
                 // 强制布局
                 layoutIfNeeded()
                 
-                // 获取底部工具栏的最大Y值
-                viewModel.cellHeight = bottomToolView.frame.maxY
+                let viewSize1 = CGSize(width: UIScreen.main.bounds.size.width - 2 * edgeMargin, height: CGFloat(MAXFLOAT))
+                let viewSize2 = CGSize(width: UIScreen.main.bounds.size.width - 2 * edgeMargin, height: CGFloat(MAXFLOAT))
+                let contentLabel_height = contentLabel.text?.boundingRect(with: viewSize1, options: [.usesLineFragmentOrigin], context: nil).height ?? 0
+                let retweetedLabel_height = retweetedContentLabel.text?.boundingRect(with: viewSize2, options: [.usesLineFragmentOrigin], context: nil).height ?? 0
+                print("北京惟易")
+                print(contentLabel_height,retweetedLabel_height)
+                // cellHeight -- 时间最大值maxY + 间距(15) + 微博文本的高度 + 间距(15) + 转发微博的高度 + 间距(10) + 集合视图的高度 + 间距(10) + 获取底部工具栏的maxY
+                
+//                viewModel.cellHeight = picCollectionView.frame.maxY + 40
+                viewModel.cellHeight = timeLabel.frame.maxY + edgeMargin + contentLabel_height + retweetedLabel_height + edgeMargin + picViewSize.height + itemMargin + 40
             }
         }
+        
     }
+    
 
 }
 extension LBHomeTableVCell {
     func calculatePicViewSize(count : Int) -> CGSize {
         // 没有配图
         if count == 0 {
+            picViewBottomCons.constant = 0
             return CGSize.zero
         }
+        
+        // 有配图需要改约束有值
+        picViewBottomCons.constant = -10
         
         // 取出picCollectionView对应的layout
         let layout = picCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -135,10 +150,10 @@ extension LBHomeTableVCell {
             // 取出图片
             let urlString = viewModel?.picURLs.last?.absoluteString
             let image = SDWebImageManager.shared().imageCache?.imageFromDiskCache(forKey: urlString)
-            
+
             // 设置一张图片是layout的itemSize
             layout.itemSize = CGSize(width: (image?.size.width)! * 2, height: (image?.size.height)! * 2)
-            
+
             return CGSize(width: image!.size.width * 2, height: image!.size.height * 2)
         }
         
@@ -160,7 +175,7 @@ extension LBHomeTableVCell {
         
         // 计算picView的高度
         let picViewH = rows * imageViewWH + (rows - 1) * itemMargin
-        
+        print("picViewH :::\(picViewH,rows,imageViewWH)")
         // 计算picView的宽度
         let picViewW = UIScreen.main.bounds.width - 2 * edgeMargin
         

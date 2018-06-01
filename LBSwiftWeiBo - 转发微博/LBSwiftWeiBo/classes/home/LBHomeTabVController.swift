@@ -26,9 +26,10 @@ class LBHomeTabVController: LBBaseTableController {
         loadStatuses()
         // ----------- cellHeight -----------
         // 行高自动适应
-        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.rowHeight = UITableViewAutomaticDimension
         // 预估行高
         tableView.estimatedRowHeight = 200
+
     }
 }
 extension LBHomeTabVController {
@@ -86,7 +87,7 @@ extension LBHomeTabVController{
                 let viewModel = LBHStatusViewModel(status: status)
                 self.viewModels.append(viewModel)
             }
-            // 4.缓存图片
+            // 缓存图片
             self.cacheImages(viewModels: self.viewModels)
 //            // 刷新表视图
 //            self.tableView.reloadData()
@@ -101,7 +102,6 @@ extension LBHomeTabVController{
             for picURL in viewmodel.picURLs {
                 group.enter()
                 SDWebImageManager.shared().imageDownloader?.downloadImage(with: picURL as URL, options: [], progress: nil, completed: { (_, _, _, _) -> Void in
-                    print("下载了一张图片")
                     group.leave()
                 })
 
@@ -134,7 +134,7 @@ extension LBHomeTabVController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // 获取模型对象
         let viewModel = viewModels[indexPath.row]
-        
+
         return viewModel.cellHeight
     }
 }
